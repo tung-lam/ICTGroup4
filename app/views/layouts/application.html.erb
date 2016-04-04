@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Demo App</title>
+  <title>TELEGAME</title>
+  
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,7 +12,7 @@
 	<header class="navbar navbar-default" role="navigation">
     <div class="navbar-inner">
       <div class="container">
-        <div id="logo" class="navbar-brand"><%= link_to "DEMO APP", root_path %></div>
+        <div id="logo" class="navbar-brand"><%= link_to "TELEGAME", root_path %></div>
         <nav class="collapse navbar-collapse navbar-ex1-collapse">
         	<% if user_signed_in? -%>
 						<ul class="nav navbar-nav navbar-right">
@@ -27,7 +29,7 @@
         </nav>
       </div>
     </div>
-  </header>
+    </header>
 
 	<div id="main_content" class="container">
 		<% flash.each do |name, msg| %>
@@ -39,5 +41,25 @@
 			</div>
 		</div>
 	</div>
+		
 </body>
+
+<style>
+p1{
+	color: black;
+	font-size: small;
+	line-height: 30px;
+}
+</style>
+<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+<p1><center> Powered By Rails
+			<br> Copyright © ICT BI5 - Group 4 
+			<br> Group Members: 
+			 Do Dang Ngoc Kha
+			 - Le Quoc Dat
+			 - Duong Vu Hoang Linh
+			 - Ngo Si Tung Lam
+			 - Ngoc An
+</center></p1>
+
 </html>
