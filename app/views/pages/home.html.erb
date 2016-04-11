@@ -1,0 +1,9 @@
+﻿Home Pageee
+
+<br><br><br>
+
+<% if user_signed_in? -%>
+	<%= link_to "Game 1", game1_path %>
+<% else -%>
+	<%= link_to 'Game 1', new_user_session_path %>
+<% end -%>
