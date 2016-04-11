@@ -15,12 +15,13 @@
         <nav class="collapse navbar-collapse navbar-ex1-collapse">
         	<% if user_signed_in? -%>
 				<ul class="nav navbar-nav navbar-right">
-					
+					<li><%= link_to 'About', pages_about_path %></li>
 					<li><%= link_to 'Account', edit_user_registration_path %></li>
 					<li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
 				</ul>
 			<% else -%>
 				<ul class="nav navbar-nav pull-right">
+					<li><%= link_to 'About', pages_about_path %></li>
 					<li><%= link_to 'Sign up', new_user_registration_path %></li>
 					<li><%= link_to 'Sign in', new_user_session_path %></li>
 				</ul>
@@ -53,13 +54,7 @@ p1{
 </style>
 <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
 <p1><center> Powered By Rails
-			<br> Copyright © ICT BI5 - Group 4 
-			<br> Group Members: 
-			 Do Dang Ngoc Kha
-			 - Le Quoc Dat
-			 - Duong Vu Hoang Linh
-			 - Ngo Si Tung Lam
-			 - Ngoc An
+			<br> Copyright © ICT BI5 - Group 4
 </center></p1>
 
 </html>
