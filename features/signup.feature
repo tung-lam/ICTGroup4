@@ -11,7 +11,7 @@ Then I should see "Sign up" in the "h2"
 
 
 
-Scenario: Fill out sign up
+Scenario: Fill in sign up
 Given I am on the "/users/sign_up"
 ##When I fill in the "/users/sign_up"
 #When I fill in "name" with "linhtynny"
@@ -21,10 +21,3 @@ And I fill in "Password confirmation" with "linhlinh"
 And I click "Sign up"
 Then I am on the homepage
 #And I should see "Welcome! You have signed up successfully."
-
-
-Scenario: Sign out from the account
-Given I am on the "/users/sign_up"
-#When I click "Sign out"
-Then I am on the homepage
-#And I should see "Signed out successfully."

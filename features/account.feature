@@ -23,7 +23,7 @@ Then I am on the homepage
 
 
 Scenario: Sign out from the account
-Given I am on the "/users/sign_up"
+Given I am on the "/users/edit"
 #When I click "Sign out"
 Then I am on the homepage
 #And I should see "Signed out successfully."
