@@ -1,9 +1,7 @@
-﻿Home Pageee
-
-<br><br><br>
+﻿<h3>Choose a game to play</h3>
 
 <% if user_signed_in? -%>
-	<%= link_to "Game 1", game1_path %>
+	<h2><center><%= link_to "Catch the phrases", game1_path %></center></h2>
 <% else -%>
-	<%= link_to 'Game 1', new_user_session_path %>
+	<h2><center><%= link_to 'Catch the phrases', new_user_session_path %></center></h2>
 <% end -%>
