@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
-<<<<<<< HEAD
 ruby '2.1.5'
-=======
-ruby '2.2.3'
->>>>>>> master
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
@@ -52,12 +48,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'coffee-script-source', '1.8.0'
 gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-<<<<<<< HEAD
 
 group :test, :development do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 end
-=======
->>>>>>> master
