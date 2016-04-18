@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+</head>
+<body>
+             Level:1
+	<%=image_tag("data/1.jpg", :size =>"450x450") %>
+</body>
+<body>
+	<form>
+		Answer: <br>
+		<input id ="answer" type="text"><br>
+		<button onclick="check()">Submit</button>
+	</form>
+	<script>
+	function check (){
+		 var str = document.getElementById("answer").value;
+		 var testing = str.toLowerCase();
+
+		 				if (testing=="bong de")
+		 				{	
+		 					window.alert("You are right");
+		 				}
+		 				else
+		 				{
+		 				window.alert("You are wrong");
+		 				}
+					}
+	</script>
+</body>
+
+</html>
