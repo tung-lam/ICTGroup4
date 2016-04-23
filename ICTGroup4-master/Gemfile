@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
+<<<<<<< HEAD:ICTGroup4-master/Gemfile
 ruby '2.1.8'
+=======
+ruby '2.2.3'
+>>>>>>> 7c3d137c2b8ba415b748c7a63cf454ae60dbc255:Gemfile
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
