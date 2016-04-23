@@ -1,0 +1,85 @@
+﻿<% if user_signed_in? %>
+  <p id="intro">
+    Hello
+    <%= current_user.name %>
+    <br/>
+    <span>
+     Let's have some fun!
+    </span>
+  </p>
+<% else %>
+  <p id="intro">
+    Welcome to our Website
+    <br/>
+    <span>
+      Sign Up now to play our Free Games!
+    </span>
+  </p>
+<% end %>
+
+
+<% if user_signed_in? -%>
+
+	<br>
+	<div id="posts"><center>
+		<div class="post"><center>
+		   <%= link_to image_tag("cs.jpg", :class => "post_image"), game1_path %>
+		   
+		  <div class="post_content">
+			<div class="title">
+			  <h2>
+				<%= link_to "CS Aller", game1_path %>
+			  </h2>
+			</div>
+			<div class="data clearfix">
+			  <p>
+				Best FPS Game m8. 
+			  </p>
+			</div>
+		  </div>
+		</div>  
+	</div>
+	
+	<br>
+	<div id="posts"><center>
+		<div class="post"><center>
+		   <%= link_to image_tag("need.jpg", :class => "post_image"), game2_path %>
+		   
+		  <div class="post_content">
+			<div class="title">
+			  <h2>
+				<%= link_to "Need for Speed", game2_path %>
+			  </h2>
+			</div>
+			<div class="data clearfix">
+			  <p>
+				Best Racing Game m8. 
+			  </p>
+			</div>
+		  </div>
+		</div>
+	</div>
+	
+	<br>
+	<div id="posts"><center>
+		<div class="post"><center>
+		   <%= link_to image_tag("fifa3.jpg", :class => "post_image"), game3_path %>
+		   
+		  <div class="post_content">
+			<div class="title">
+			  <h2>
+				<%= link_to "FIFA 16", game3_path %>
+			  </h2>
+			</div>
+			<div class="data clearfix">
+			  <p>
+				Best Football Game m8. 
+			  </p>
+			</div>
+		  </div>
+		</div>
+	</div>
+	
+<% else -%>
+	<%= link_to 'Game 1', new_user_session_path %>
+<% end -%>
