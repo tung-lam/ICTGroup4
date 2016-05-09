@@ -5,4 +5,5 @@ class Game1Controller < ApplicationController
 	end
 	def instruction
 	end
+  end
 end
