@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Welcome</title>
-</head>
-<body>
-             Level:1
-	<%=image_tag("data/1.jpg", :size =>"450x450") %>
-</body>
-<body>
-	<form>
-		Answer: <br>
-		<input id ="answer" type="text"><br>
-		<button onclick="check()">Submit</button>
-	</form>
+
+<title>Welcome</title>
+
+<div class="post">
+<h1><center>
+	<br>
+    <b>Level: 1</b>
+	<br><br><%=image_tag("data/1.jpg", :size =>"450x450", :class => "game_image") %>
+</center></h1>
+</div>
+
+<body><center>
+	
+	<br><b>Answer: </b><br><br>
+	<input class="textbox_game" type="text" id="answer"><br><br>
+
+	<button class="button_game" style="vertical-align:middle" onclick="check()"><span>Submit </span></button>
+	
 	<script>
 	function check (){
-		 var str = document.getElementById("answer").value;
-		 var testing = str.toLowerCase();
+		var str = document.getElementById("answer").value;
+		var testing = str.toLowerCase();
 
-		 				if (testing=="bong de")
-		 				{	
-		 					window.alert("You are right");
-		 				}
-		 				else
-		 				{
-		 				window.alert("You are wrong");
-		 				}
-					}
+		if (testing=="bong de")
+		{	
+			window.alert("You are right");
+		}
+		else
+		{
+			window.alert("You are wrong");
+		}
+	}
 	</script>
-</body>
+
+</center></body>
 
 </html>
