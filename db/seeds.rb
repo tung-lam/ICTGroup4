@@ -18,6 +18,6 @@ game1lvs = [{:level => 1, :imagelink => "data/1.jpg", :answer => "bong de"},
       	  {:level => 10, :imagelink => "data/10.jpg", :answer => "ca cao"},
   	 ]
 #cho nay la de tao datafix
-# game1lvs.each do |game1lv|
-#   Game1lv.create!(game1lv)
-# end
+game1lvs.each do |game1lv|
+  Game1lv.create(game1lv)
+ end
