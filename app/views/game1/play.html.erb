@@ -23,11 +23,12 @@
 	function check (){
 		var str = document.getElementById("answer").value;
 		var testing = str.toLowerCase();
+		var answer = '<%= @game1answer %>'
 
-		if (testing==@game1answer)
+		if (testing == answer)
 		{	
 			window.alert("You are right");
-			// usergame1lv++
+			// @usergame1lv = @usergame1lv + 1;
 		}
 		else
 		{
