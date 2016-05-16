@@ -6,8 +6,9 @@
 <div class="post">
 <h1><center>
 	<br>
-    <b>Level: 1</b>
-	<br><br><%=image_tag("data/1.jpg", :size =>"450x450", :class => "game_image") %>
+    <b>Level: 1 </b>
+	<br><br><%=image_tag(@game1link, :size =>"450x450", :class => "game_image") %>
+	<!-- <br><% @game1 %></br> -->
 </center></h1>
 </div>
 
@@ -23,13 +24,15 @@
 		var str = document.getElementById("answer").value;
 		var testing = str.toLowerCase();
 
-		if (testing=="bong de")
+		if (testing==@game1answer)
 		{	
 			window.alert("You are right");
+			// usergame1lv++
 		}
 		else
 		{
 			window.alert("You are wrong");
+			// reload
 		}
 	}
 	</script>
