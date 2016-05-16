@@ -15,29 +15,16 @@
 <body><center>
 	
 	<br><b>Answer: </b><br><br>
-	<input class="textbox_game" type="text" id="answer"><br><br>
-
-	<button class="button_game" style="vertical-align:middle" onclick="check()"><span>Submit </span></button>
 	
-	<script>
-	function check (){
-		var str = document.getElementById("answer").value;
-		var testing = str.toLowerCase();
-		var answer = '<%= @game1answer %>'
+	<%= form_tag game1_play_path, :method => :get, :id => "text_form" do %>
+		
+		<%= text_field_tag "answer", "" ,class: 'textbox_game' %>
+		<br><br>
+		<%= submit_tag("Submit", :class => "button_game") %>
+		
+	<% end %>
 
-		if (testing == answer)
-		{	
-			window.alert("You are right");
-			// @usergame1lv = @usergame1lv + 1;
-		}
-		else
-		{
-			window.alert("You are wrong");
-			// reload
-		}
-	}
-	</script>
-
+	
 </center></body>
 
 </html>

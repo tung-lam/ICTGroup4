@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 game1lvs = [{:level => 1, :imagelink => "data/1.jpg", :answer => "bóng đè"},
-    	 {:level => 2, :imagelink => "data/2.jpg", :answer => "ca lon nuot ca be"},
+    	 {:level => 2, :imagelink => "data/2.jpg", :answer => "câu giờ"},
     	  {:level => 3, :imagelink => "data/3.jpg", :answer => "can thiep"},
       	  {:level => 4, :imagelink => "data/4.jpg", :answer => "chan tuong"},
       	  {:level => 5, :imagelink => "data/5.jpg", :answer => "chi thi"},
@@ -20,4 +20,4 @@ game1lvs = [{:level => 1, :imagelink => "data/1.jpg", :answer => "bóng đè"},
 #cho nay la de tao datafix
 game1lvs.each do |game1lv|
   Game1lv.create(game1lv)
- end
+end

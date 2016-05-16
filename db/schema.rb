@@ -52,9 +52,9 @@ ActiveRecord::Schema.define(version: 20160509094745) do
     t.datetime "updated_at",                          null: false
     t.string   "name"
     t.integer  "rubynumber"
-    t.integer  "game1lv"
-    t.integer  "game2lv"
-    t.integer  "game3lv"
+    t.integer  "game1lv",                default: 1
+    t.integer  "game2lv",                default: 1
+    t.integer  "game3lv",                default: 1
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
