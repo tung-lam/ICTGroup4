@@ -18,7 +18,7 @@ class Game1Controller < ApplicationController
 		@game1answer_user = params["answer"]
 		
 		if @game1answer_user == @game1answer
-			redirect_to root_path, :flash => { :success => "You are right!" }
+			redirect_to game1_play_path, :flash => { :success => "You are right!" }
 		else
 			#flash.now[:alert] = 'You are wrong! Lets try again!'
 		end
