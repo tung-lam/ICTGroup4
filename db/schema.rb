@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20160509094745) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "name"
-    t.integer  "rubynumber"
+    t.integer  "rubynumber",             default: 0
     t.integer  "game1lv",                default: 1
     t.integer  "game2lv",                default: 1
     t.integer  "game3lv",                default: 1
