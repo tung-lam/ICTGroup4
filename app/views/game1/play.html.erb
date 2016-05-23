@@ -6,7 +6,7 @@
 <div class="post">
 <h1><center>
 	<br>
-    <b>Level: 1 </b>
+    <b>Level: <%= @game1.level.inspect %></b>
 	<br><br><%=image_tag(@game1link, :size =>"450x450", :class => "game_image") %>
 	<!-- <br><% @game1 %></br> -->
 </center></h1>
@@ -16,7 +16,7 @@
 	
 	<br><b>Answer: </b><br><br>
 	
-	<%= form_tag game1_play_path, :method => :get, :id => "text_form" do %>
+	<%= form_tag game1_play_path(@game1), :method => :get, :id => "text_form" do %>
 		
 		<%= text_field_tag "answer", "" ,class: 'textbox_game' %>
 		<br><br>
