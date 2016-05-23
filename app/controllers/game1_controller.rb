@@ -5,39 +5,27 @@ class Game1Controller < ApplicationController
 	
 	def play
 	
-		#@userid = current_user.id
-		#@usergame1lv = User.where(id: @userid).limit(1).pluck(:game1lv)	
-		#if @usergame1lv == [nil]
-		#	@usergame1lv = 1
-		#end
-		
-		
-		#@game1lv = Game1lv.pluck(:level)
-		#@game1lv = 1
-		
-		@game1 = Game1lv.find(params[:level])
-	
-		@game1l = Game1lv.where(:level => @game1).limit(1).pluck(:imagelink)
-		@game1a = Game1lv.where(:level => @game1).limit(1).pluck(:answer)
-		@game1link = @game1l[0].to_s
-		@game1answer = @game1a[0].to_s
-		
-		@game1lv = 1
-		@game1.level = @game1lv
 
+		@game1 = Game1lv.find(params[:level])
+		
+		#@game1l = Game1lv.where(:level => @game1.level).limit(1).pluck(:imagelink)
+		#@game1a = Game1lv.where(:level => @game1.level).limit(1).pluck(:answer)
+		#@game1link = @game1l[0].to_s
+		#@game1answer = @game1a[0].to_s
+
+		@game1link = @game1.imagelink
+		@game1answer = @game1.answer
+		
+		@game1.level = params[:level]
+		
 		@game1answer_user = params["answer"]
 		
 		if @game1answer_user == @game1answer
 			
-			#redirect_to game1_play_path(@game1_next), :flash => { :success => "You are right!" }
-		
-			flash.now[:alert] = 'You are rite!'
+			@game1.update({level: @game1.level + 1})
 			
-			redirect_to game1_play_path(@game1lv += 1)
+			redirect_to game1_play_path(@game1.level), :flash => { :success => "You are right! Now try the next question" }
 		end
-		
-		
-	
 	end
 	
 	def instruction
