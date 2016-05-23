@@ -5,8 +5,8 @@ class Game1Controller < ApplicationController
 	
 	def play
 	
-		#@userid = current_user.id
-		#@usergame1lv = User.where(id: @userid).limit(1).pluck(:game1lv)	
+		# @usergame1lv = current_user.game1lv
+		# @user = User.find("#{@userid}")
 		#if @usergame1lv == [nil]
 		#	@usergame1lv = 1
 		#end
@@ -24,11 +24,14 @@ class Game1Controller < ApplicationController
 		
 		@game1answer_user = params["answer"]
 	
-		if @game1answer_user == @game1answer
+		if @game1answer_user == @game1answer.downcase
 			
 			redirect_to game1_play_path(@game1.level += 1), :flash => { :success => "You are right! Now try the next question" }
-			#flash.now[:alert] = 'You are rite!'
-			
+			flash.now[:alert] = 'You are rite!'
+			# @user.game1lv += 1
+			# @user.save
+		elsif @game1answer_user != @game1answer.downcase && @game1answer_user != nil
+			flash.now[:error] = 'You are wrong! Try again'
 		end
 		
 	end
