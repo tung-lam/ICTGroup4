@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160524194132) do
+ActiveRecord::Schema.define(version: 20160524223234) do
 
   create_table "game1lvs", force: :cascade do |t|
     t.integer "level"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20160524194132) do
     t.integer  "game2lv",                default: 1
     t.integer  "game3lv",                default: 1
     t.integer  "gamelv1"
+    t.integer  "lvgame1",                default: 1
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
