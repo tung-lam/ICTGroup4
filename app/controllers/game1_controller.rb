@@ -19,10 +19,15 @@ class Game1Controller < ApplicationController
 		@game1answer_user = @game1au.to_s
 		
 		@game1.level = params[:level]
+		
+		@user = User.find(current_user)
+		#@user.gamelv1 = 1
+		#@user.save!
 	
 		if @game1answer_user.downcase == @game1answer
 			
 			@game1.update({level: @game1.level + 1})
+			@user.update({gamelv1: @user.gamelv1 + 1})
 			redirect_to game1_play_path(@game1.level), :flash => { :success => "You are right! Now try the next question" }
 
 		else @game1answer_user.downcase != @game1answer && @game1answer_user != nil

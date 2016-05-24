@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160509094745) do
+ActiveRecord::Schema.define(version: 20160524194132) do
 
   create_table "game1lvs", force: :cascade do |t|
     t.integer "level"
@@ -51,10 +51,11 @@ ActiveRecord::Schema.define(version: 20160509094745) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "name"
-    t.integer  "rubynumber",             default: 0
+    t.integer  "rubynumber"
     t.integer  "game1lv",                default: 1
     t.integer  "game2lv",                default: 1
     t.integer  "game3lv",                default: 1
+    t.integer  "gamelv1"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
