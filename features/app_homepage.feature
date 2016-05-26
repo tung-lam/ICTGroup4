@@ -6,7 +6,7 @@ I want to see the homepage of the app
 Scenario: View home page
 Given I am on the homepage
 Then I should see "TELEGAME" in a link
-And I should see "Choose a game to play" in the "h3"
+#And I should see "Choose a game to play" in the "h3"
 And I should see "About" in a link
 And I should see "Powered By Rails"
 And I should see "Copyright © ICT BI5 - Group 4"
@@ -21,7 +21,7 @@ And I should see "About" in a link
 
 Scenario: Find the link to the games
 Given I am on the homepage
-Then I should see "Catch the phrases" in a link
+Then I should see "Catch The Phrase" in a link
 
 
 Scenario: Sign out from the account

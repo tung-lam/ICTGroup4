@@ -1,4 +1,4 @@
-Feature: Player views the homepage of "Catch the phrases"
+Feature: Player views the homepage of "Catch The Phrase"
 In order to play the game
 As a player
 I want to see the homepage of the game
@@ -6,9 +6,9 @@ I want to see the homepage of the game
 
 
 
-Scenario: View the homepage of "Catch the phrases"
+Scenario: View the homepage of "Catch The Phrase"
 Given I am on the "/game1"
-Then I should see "Catch the phrases" in the "h1"
+Then I should see "Catch The Phrase" in the "h1"
 
 
 
