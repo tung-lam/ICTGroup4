@@ -26,10 +26,15 @@ class Game1Controller < ApplicationController
 	
 		if @game1answer_user.downcase == @game1answer
 			
-			@game1.update({level: @game1.level + 1})
+			# @game1.update({level: @game1.level + 1})
 			@user.update({lvgame1: @user.lvgame1 + 1})
-			redirect_to game1_play_path(@game1.level), :flash => { :success => "You are right! Now try the next question" }
+<<<<<<< HEAD
+			redirect_to game1_play_path(@game1.level + 1), :flash => { :success => "You are right! Now try the next question" }
 
+=======
+			@user.update({rubynumber: @user.rubynumber + 10})
+			redirect_to game1_play_path(@game1.level + 1), :flash => { :success => "You are right! Now try the next question" }
+>>>>>>> e139f3030c40d3b7bc6b0edc6cf15a43c015b76f
 		elsif @game1answer_user.downcase != @game1answer && @game1answer_user != nil
 		# else
 			flash.now[:error] = 'You are wrong! Try again'
