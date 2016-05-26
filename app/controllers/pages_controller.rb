@@ -5,4 +5,10 @@ class PagesController < ApplicationController
 	
 	def about
 	end
+
+	def achievement
+		@x = 1
+		@user = User.find(current_user)
+		#@userrubynumber = @user.name
+	end
 end
