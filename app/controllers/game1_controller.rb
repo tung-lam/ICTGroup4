@@ -31,7 +31,7 @@ class Game1Controller < ApplicationController
 			redirect_to game1_play_path(@game1.level + 1), :flash => { :success => "You are right! Now try the next question" }
 
 			@user.update({rubynumber: @user.rubynumber + 10})
-		
+			
 		elsif @game1answer_user.downcase != @game1answer && @game1answer_user != nil
 			#flash.now[:error] = 'You are wrong! Try again'
 		end

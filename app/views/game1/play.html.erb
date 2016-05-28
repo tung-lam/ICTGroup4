@@ -23,13 +23,23 @@
 		
 		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<%= text_field_tag "answer", "" ,class: 'textbox_game' %>
-		<%= link_to "Hint", game1_play_path(@game1), class: "button_hint" %>
+		
+		<button	class="button_hint" onclick="hint()">Hint</button>
+		
 		<br><br>
 		<%= submit_tag("Submit", :class => "button_game") %>
 		
 		
 	<% end %>
 
+	<script>
+	function hint() {
+		var str = @user.name.inspect;
+		var name = str.toLowerCase();
+		
+		alert(name);
+	}
+	</script>
 	
 </center></body>
 
