@@ -7,12 +7,10 @@ Given(/^I am on the "([^"]*)"$/) do |path|
   visit path
 end
 
-Given(/^the following users exist:$/) do |users|
-  # table is a Cucumber::Core::Ast::DataTable
-  # users.hashes.each do |user|
-  #   Factory(:user,user)
-  # end
-  User.create!(users)
+Given(/^the following users exist:$/) do |users_table|
+  users_table.hashes.each do |user|
+    User.create!(user)
+  end
 end
 
 
