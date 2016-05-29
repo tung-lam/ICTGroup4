@@ -11,4 +11,8 @@ class PagesController < ApplicationController
 		@user = User.find(current_user)
 		#@userrubynumber = @user.name
 	end
+
+	 def create
+    	@user = User.create!(params[:user])
+    end
 end
