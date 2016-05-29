@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160524223234) do
+ActiveRecord::Schema.define(version: 20160529054845) do
 
   create_table "game1lvs", force: :cascade do |t|
     t.integer "level"
     t.string  "imagelink"
     t.string  "answer"
+    t.string  "hint"
   end
 
   create_table "installs", force: :cascade do |t|

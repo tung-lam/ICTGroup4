@@ -12,7 +12,7 @@ class PagesController < ApplicationController
 		#@userrubynumber = @user.name
 	end
 
-	 def create
-    	@user = User.create!(params[:user])
-    end
+	 # def create
+  #   	@user = User.create!(params[:user])
+  #   end
 end

@@ -7,10 +7,10 @@
 <h1><center>
 	<br>
     <b>Level: <%= @game1.level.inspect %> <br>
-    <!-- <br> User Level: <%= @user.lvgame1.inspect %></b> -->
+    <br> User Level: <%= @user.lvgame1.inspect %> <br>
+	<br> User Ruby: <%= @user.rubynumber.inspect %></b>
     <b><% %></b>
 	<br><br><%=image_tag @game1link, :size =>"450x450", :class => "game_image" %>
-	<!-- <br><% @game1 %></br> -->
 </center></h1>
 </div>
 
@@ -21,12 +21,21 @@
 	<%= form_tag game1_play_path(@game1), :method => :get, :id => "text_form" do %>
 		
 		<%= text_field_tag "answer", "" ,class: 'textbox_game' %>
-		<br><br>
-		<%= submit_tag("Submit", :class => "button_game") %>
-		<%= button_to("Hint", :class => "button_game") %>
 		
 	<% end %>
-
+	
+	<br>
+	<button type="submit" value="Submit" class="btn blue">Submit</button>
+	
+	<button	class="btn green" onclick="hint()">Hint</button>
+	
+	<script>
+	function hint() {
+		var str = '<%= @game1.hint %>'
+		
+		window.alert(str);
+	}
+	</script>
 	
 </center></body>
 
