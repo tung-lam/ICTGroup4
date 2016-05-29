@@ -11,7 +11,6 @@
 	<br> User Ruby: <%= @user.rubynumber.inspect %></b>
     <b><% %></b>
 	<br><br><%=image_tag @game1link, :size =>"450x450", :class => "game_image" %>
-	<br><% @game1 %></br> 
 </center></h1>
 </div>
 
@@ -21,23 +20,20 @@
 	
 	<%= form_tag game1_play_path(@game1), :method => :get, :id => "text_form" do %>
 		
-		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<%= text_field_tag "answer", "" ,class: 'textbox_game' %>
 		
-		<button	class="button_hint" onclick="hint()">Hint</button>
-		
-		<br><br>
-		<%= submit_tag("Submit", :class => "button_game") %>
-		
-		
 	<% end %>
-
+	
+	<br>
+	<button type="submit" value="Submit" class="btn blue">Submit</button>
+	
+	<button	class="btn green" onclick="hint()">Hint</button>
+	
 	<script>
 	function hint() {
-		var str = @user.name.inspect;
-		var name = str.toLowerCase();
+		var str = '<%= @game1.hint %>'
 		
-		alert(name);
+		window.alert(str);
 	}
 	</script>
 	
