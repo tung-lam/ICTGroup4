@@ -30,32 +30,24 @@
 
 	<% end %>
 	
+	
 	<script>
 		var answer = '<%= @game1answer %>';
 		var answer_user = '<%= @game1answer_user %>';
-		if (answer_user == answer) {
-				window.alert("Correct! The answer is: " + answer);
-		}
-
 		if (answer_user != "" && answer_user != null) {
 			if (answer_user != answer) {
 				window.alert("Incorrect!");
+			} else {
+				window.alert("Correct! The answer is: " + answer);
 			}
-			// window.alert("Correct! The answer is: " + answer);
 		}
+	
 	</script>
 
 	<script>
 	function hint() {
-		var str = '<%= @hint %>';
-		var ruby_number = '<%= @user.rubynumber %>';
-
-		if (ruby_number < 40) {
-			window.alert("Sorry ! You don't have enough ruby to get a hint");
-		} else {
-			window.alert("Hint: " + str + "...");
-			// <% @user.update({rubynumber: @user.rubynumber - 40}) %>
-		}
+		var str = '<%= @hint %>'
+		window.alert("Hint: " + str + "...");
 	}
 	</script>
 	
