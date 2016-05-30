@@ -62,3 +62,7 @@ group :test, :development do
 end
 
 gem 'simplecov', :require => false, :group => :test
+<<<<<<< HEAD
+=======
+gem 'factory_girl_rails'
+>>>>>>> b1dd90aab73ab9cb1b4b001974a98b6030763468

@@ -61,4 +61,9 @@ group :test, :development do
   gem 'database_cleaner'
 end
 
+<<<<<<< HEAD
 gem 'simplecov', :require => false, :group => :test
+=======
+gem 'simplecov', :require => false, :group => :test
+gem 'factory_girl_rails'
+>>>>>>> b1dd90aab73ab9cb1b4b001974a98b6030763468
