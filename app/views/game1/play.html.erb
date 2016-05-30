@@ -7,7 +7,7 @@
 <h1><center>
 	<br>
     <b>Level: <%= @game1.level.inspect %> <br>
-    <br> User Level: <%= @user.lvgame1.inspect %> <br>
+    <!-- <br> User Level: <%= @user.lvgame1.inspect %> <br> -->
 	<br> User Ruby: <%= @user.rubynumber.inspect %></b>
     <b><% %></b>
 	<br><br><%=image_tag @game1link, :size =>"450x450", :class => "game_image" %>
@@ -15,25 +15,39 @@
 </div>
 
 <body><center>
-	
 	<br><b>Answer: </b><br><br>
 	
 	<%= form_tag game1_play_path(@game1), :method => :get, :id => "text_form" do %>
-		
+
 		<%= text_field_tag "answer", "" ,class: 'textbox_game' %>
+		<br><br>
 		
+		<!-- <%= @game1answer_user %> <br> -->
+
+		<%= submit_tag "Submit", :class => "btn blue" %> 
+
+		<button	class="btn green" onclick="hint()">Hint</button>
+
 	<% end %>
 	
-	<br>
-	<button type="submit" value="Submit" class="btn blue">Submit</button>
-	
-	<button	class="btn green" onclick="hint()">Hint</button>
 	
 	<script>
+		var answer = '<%= @game1answer %>';
+		var answer_user = '<%= @game1answer_user %>';
+		if (answer_user != "" && answer_user != null) {
+			if (answer_user != answer) {
+				window.alert("Incorrect!");
+			} else {
+				window.alert("Correct! The answer is: " + answer);
+			}
+		}
+	
+	</script>
+
+	<script>
 	function hint() {
-		var str = '<%= @game1.hint %>'
-		
-		window.alert(str);
+		var str = '<%= @hint %>'
+		window.alert("Hint: " + str + "...");
 	}
 	</script>
 	
