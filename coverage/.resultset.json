@@ -612,7 +612,7 @@
         null,
         1,
         null,
-        1,
+        null,
         null,
         1,
         1,
@@ -645,12 +645,12 @@
         null,
         null,
         1,
-        9,
+        8,
         null,
         null,
         1,
-        4,
-        4,
+        0,
+        0,
         null,
         null,
         null,
@@ -685,6 +685,10 @@
         null,
         1,
         6,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/home/linhtynny/Dev project/ICTGroup4/app/controllers/pages_controller.rb": [
@@ -740,6 +744,6 @@
         null
       ]
     },
-    "timestamp": 1464544072
+    "timestamp": 1464669429
   }
 }

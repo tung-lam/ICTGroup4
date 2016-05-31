@@ -5,11 +5,11 @@ I want to see the homepage of the game
 
 Background: users homepagve been added to database
 
- Given the following users exist:
-|id	|username 	|email         		|lvgame1|
-|1	|linhtynny	|linhtynny@gmail.com|1		|
-|2	|meomeo		|meomeo@gmail.com	|2		|   
-And I am on the "/game1"
+# Given the following users exist:
+# |id	|username 	|email         		|lvgame1|
+# |1	|linhtynny	|linhtynny@gmail.com|1		|
+# |2	|meomeo		|meomeo@gmail.com	|2		|   
+# And I am on the "/game1"
 
 Scenario: View the homepage of "Catch The Phrase"
 # Given I am on the "/game1"
@@ -17,7 +17,7 @@ Scenario: View the homepage of "Catch The Phrase"
 # And I should see "Play Game" in a link
 # And I should see "Instructions" in a link
 # And I should see "Achievements" in a link
-#And I should see the image "catch.jpg"
+# And I should see the image "catch.jpg"
 
 
 Scenario: Go to the game
