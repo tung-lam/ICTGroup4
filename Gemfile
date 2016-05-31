@@ -55,6 +55,10 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'sprockets', '< 3.0.0'
 
 
+group :devlopment, :test do
+  gem 'sqlite3'
+end
+
 group :test, :development do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
