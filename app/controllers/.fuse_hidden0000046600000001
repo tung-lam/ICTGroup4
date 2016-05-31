@@ -4,7 +4,6 @@ class Game1Controller < ApplicationController
 	end
 	
 	def play
-		@last_answer = session["answer"]
 		@game1 = Game1lv.find(params[:level])
 		
 		#@game1l = Game1lv.where(:level => @game1.level).limit(1).pluck(:imagelink)
@@ -23,20 +22,24 @@ class Game1Controller < ApplicationController
 		@game1.level = params[:level]
 		
 		@user = User.find(current_user)
+		@x = 2
 	
 		if (@game1answer_user == @game1answer)
+			@x = 1
 			# flash.now = 'Correct'
 			# @game1.update({level: @game1.level + 1})
 			@user.update({lvgame1: @user.lvgame1 + 1})
 			@user.update({rubynumber: @user.rubynumber + 10})
-			
+
 			redirect_to game1_play_path(@game1.level + 1)
+		else
+			@x = 0
 		# elsif @game1answer_user != nil
 		# 	flash.now[:error] = 'You are wrong! Try again'
-		
 		end
 	end
+	
 	def instruction
 	end
-	end	
   
+end
