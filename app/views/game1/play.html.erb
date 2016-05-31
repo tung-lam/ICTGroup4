@@ -22,7 +22,7 @@
 		<%= text_field_tag "answer", "" ,class: 'textbox_game' %>
 		<br><br>
 		
-		<!-- <%= @game1answer_user %> <br> -->
+		<%= @last_answer %> <br>
 
 		<%= submit_tag "Submit", :class => "btn blue" %> 
 
@@ -33,15 +33,13 @@
 	<script>
 		var answer = '<%= @game1answer %>';
 		var answer_user = '<%= @game1answer_user %>';
-		if (answer_user == answer) {
-				window.alert("Correct! The answer is: " + answer);
-		}
-
-		if (answer_user != "" && answer_user != null) {
+		
+		if (answer_user != "") {
 			if (answer_user != answer) {
 				window.alert("Incorrect!");
+			} else {
+				window.alert("Correct! The answer is: " + answer);
 			}
-			// window.alert("Correct! The answer is: " + answer);
 		}
 	</script>
 
@@ -54,7 +52,6 @@
 			window.alert("Sorry ! You don't have enough ruby to get a hint");
 		} else {
 			window.alert("Hint: " + str + "...");
-			// <% @user.update({rubynumber: @user.rubynumber - 40}) %>
 		}
 	}
 	</script>

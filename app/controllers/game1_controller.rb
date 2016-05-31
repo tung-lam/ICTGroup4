@@ -4,6 +4,7 @@ class Game1Controller < ApplicationController
 	end
 	
 	def play
+		@last_answer = session["answer"]
 		@game1 = Game1lv.find(params[:level])
 		
 		#@game1l = Game1lv.where(:level => @game1.level).limit(1).pluck(:imagelink)
