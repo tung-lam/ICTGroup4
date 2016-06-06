@@ -21,21 +21,25 @@
  @import url(http://fonts.googleapis.com/css?family=Open+Sans);
  @tipcolor: #0099ff;
  
+
+
 #intro {
 	margin: 2.75rem 0 1.75rem 0;
 	text-align: center;
 	font-size: 3rem;
 	line-height: 1;
+	color: red;
 	span {
 		font-size: 2rem;
-		color: #9B9B9B;
+		color: orange;
 	}
 }
 
 .navbar-inner {
 	background-color: #3b5998;
-    background-image: linear-gradient(#4e69a2, #3b5998 50%);
-    border-bottom: 1px solid #133783;
+    /*background-image: linear-gradient(#4e69a2, #3b5998 50%);*/
+    background-image: url(bg_nav.jpg);
+    /*border-bottom: 1px solid #133783;*/
     min-height: 42px;
 }
  
@@ -46,7 +50,7 @@
 	letter-spacing: -1px;
 	padding: 15px 0;
 	a {
-		color: white;
+		color: red;
 	}
 }
 
@@ -89,6 +93,7 @@
 
 body {
   font-family: 'Open Sans', 'sans-serif';
+  background: url(bg_nav.jpg) white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -249,7 +254,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	h1 {
 		margin: 0;
-		color: #333233;
+		color: red;
 	}
 	img {
 		width: 100%;
@@ -268,6 +273,7 @@ h1, h2, h3, h4, h5, h6 {
 	.about_image {
 		width: 690px;
 		font-size: 1.3em;
+		background: url(bg_body.jpg);
 	}
 }
 
@@ -292,7 +298,5 @@ h1, h2, h3, h4, h5, h6 {
     -moz-box-shadow: 0px 0px 8px #7bc1f7; 
     -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
 } 
-
-
 
 @import 'button.css.scss';
