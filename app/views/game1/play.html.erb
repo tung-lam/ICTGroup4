@@ -19,33 +19,29 @@
 	
 	<%= form_tag game1_play_path(@game1), :method => :get, :id => "text_form" do %>
 
-		<%= text_field_tag "answer", "" ,class: 'textbox_game' %>
+		<%= text_field_tag "answer", "" ,class: 'textbox_game', id: 'ans' %>
 		<br><br>
-		
-		<!-- <%= @game1answer_user %> <br> -->
 
-		<%= submit_tag "Submit", :class => "btn blue" %> 
-
+		<button onclick="check()" class="btn blue">Submit</button>
 		<button	class="btn green" onclick="hint()">Hint</button>
 
 	<% end %>
 	
 	<script>
-		var answer = '<%= @game1answer %>';
-		var answer_user = '<%= @game1answer_user %>';
-		if (answer_user == answer) {
-				window.alert("Correct! The answer is: " + answer);
-		}
 
-		if (answer_user != "" && answer_user != null) {
+	function check(){
+		var answer = '<%= @game1answer %>';
+		var answer_user = document.getElementById("ans").value;
+		
+		if (answer_user != "") {
 			if (answer_user != answer) {
 				window.alert("Incorrect!");
+			} else {
+				window.alert("Correct! The answer is: " + answer);
 			}
-			// window.alert("Correct! The answer is: " + answer);
 		}
-	</script>
-
-	<script>
+	}
+	
 	function hint() {
 		var str = '<%= @hint %>';
 		var ruby_number = '<%= @user.rubynumber %>';
@@ -54,10 +50,11 @@
 			window.alert("Sorry ! You don't have enough ruby to get a hint");
 		} else {
 			window.alert("Hint: " + str + "...");
-			// <% @user.update({rubynumber: @user.rubynumber - 40}) %>
 		}
 	}
+	
 	</script>
+
 	
 </center></body>
 

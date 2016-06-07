@@ -22,20 +22,23 @@ class Game1Controller < ApplicationController
 		@game1.level = params[:level]
 		
 		@user = User.find(current_user)
+		#@user.lvgame1 = 1
+		#@user.save!
 	
 		if (@game1answer_user == @game1answer)
-			# flash.now = 'Correct'
 			# @game1.update({level: @game1.level + 1})
 			@user.update({lvgame1: @user.lvgame1 + 1})
 			@user.update({rubynumber: @user.rubynumber + 10})
 			
 			redirect_to game1_play_path(@game1.level + 1)
-		# elsif @game1answer_user != nil
+		elsif @game1answer_user != nil
 		# 	flash.now[:error] = 'You are wrong! Try again'
 		
 		end
 	end
+	
 	def instruction
 	end
-	end	
+
+end	
   

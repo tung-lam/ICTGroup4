@@ -3,8 +3,9 @@
     Hello
     <%= current_user.name %>
     <br/>
+
     <span>
-     Let's have some fun!
+     Join us to get more gift!
     </span>
   </p>
 <% else %>
@@ -12,7 +13,7 @@
     Welcome to our Website
     <br/>
     <span>
-      Sign Up now to play our Free Games!
+      Sign In now to play our Free Games!
     </span>
   </p>
 <% end %>
@@ -40,45 +41,6 @@
 		</div>  
 	</div>
 	
-	<br>
-	<div id="posts"><center>
-		<div class="post"><center>
-		   <%= link_to image_tag("millionaire.jpg", :class => "post_image"), game1_path %>
-		   
-		  <div class="post_content">
-			<div class="title">
-			  <h2>
-				<%= link_to "Who Wants To Be A Millionaire", game1_path %>
-			  </h2>
-			</div>
-			<div class="data clearfix">
-			  <p>
-				Based on an international television game show. Test your knowledge with a series of multiple-choice questions of increasing difficulty.
-			  </p>
-			</div>
-		  </div>
-		</div>
-	</div>
-	
-	<br>
-	<div id="posts"><center>
-		<div class="post"><center>
-		   <%= link_to image_tag("song.jpg", :class => "post_image"), game1_path %>
-		   
-		  <div class="post_content">
-			<div class="title">
-			  <h2>
-				<%= link_to "Guess The Song", game1_path %>
-			  </h2>
-			</div>
-			<div class="data clearfix">
-			  <p>
-				Who doesn’t love music? Enjoy listening to our various songs and become the Music Master!
-			  </p>
-			</div>
-		  </div>
-		</div>
-	</div>
 	
 	
 	
@@ -103,43 +65,5 @@
 		</div>  
 	</div>
 	
-	<br>
-	<div id="posts"><center>
-		<div class="post"><center>
-		   <%= link_to image_tag("millionaire.jpg", :class => "post_image"), new_user_session_path %>
-		   
-		  <div class="post_content">
-			<div class="title">
-			  <h2>
-				<%= link_to "Who Wants To Be A Millionaire", new_user_session_path %>
-			  </h2>
-			</div>
-			<div class="data clearfix">
-			  <p>
-				Based on an international television game show. Test your knowledge with a series of multiple-choice questions of increasing difficulty.
-			  </p>
-			</div>
-		  </div>
-		</div>
-	</div>
-	
-	<br>
-	<div id="posts"><center>
-		<div class="post"><center>
-		   <%= link_to image_tag("song.jpg", :class => "post_image"), new_user_session_path %>
-		   
-		  <div class="post_content">
-			<div class="title">
-			  <h2>
-				<%= link_to "Guess The Song", new_user_session_path %>
-			  </h2>
-			</div>
-			<div class="data clearfix">
-			  <p>
-				Who doesn’t love music? Enjoy listening to our various songs and become the Music Master!
-			  </p>
-			</div>
-		  </div>
-		</div>
-	</div>
+
 <% end -%>
