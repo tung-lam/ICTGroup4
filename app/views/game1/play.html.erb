@@ -4,22 +4,24 @@
 <title>Welcome</title>
 
 <div class="post">
-<h1><center>
+<h1>
+    <div class="pull-left">
+    	Level: <%= @game1.level.inspect %>
+    </div>    
+    <div class="pull-right">
+    	User Ruby: <%= @user.rubynumber.inspect %>
+    </div>
+    <center>
 	<br>
-    <b>Level: <%= @game1.level.inspect %> <br>
-    <!-- <br> User Level: <%= @user.lvgame1.inspect %> <br> -->
-	<br> User Ruby: <%= @user.rubynumber.inspect %></b>
-    <b><% %></b>
-	<br><br><%=image_tag @game1link, :size =>"450x450", :class => "game_image" %>
+	<%=image_tag @game1link, :size =>"360x360", :class => "game_image" %>
 </center></h1>
 </div>
 
-<body><center>
-	<br><b>Answer: </b><br><br>
-	
+<body>
+	<center>
 	<%= form_tag game1_play_path(@game1), :method => :get, :id => "text_form" do %>
 
-		<%= text_field_tag "answer", "" ,class: 'textbox_game', id: 'ans' %>
+		<%= text_field_tag "answer", "" ,class: 'textbox_game', id: 'ans', placeholder: 'Answer' %>
 		<br><br>
 
 		<button onclick="check()" class="btn blue">Submit</button>
