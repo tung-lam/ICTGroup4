@@ -16,10 +16,10 @@ game1lvs = [{:level => 1, :imagelink => "data/1.jpg", :answer => "bóng đè", :
 			{:level => 8, :imagelink => "data/8.jpg", :answer => "hiệu quả", :hint => "Hint: Chỉ sự thành công của một hành động hay quyết định."},
 			{:level => 9, :imagelink => "data/9.jpg", :answer => "kén cá chọn canh", :hint => "Hint: Câu thành ngữ ám chỉ sự chảnh cờ hó của đại bộ phận các bạn nữ khi tuyển ny."},
 			{:level => 10, :imagelink => "data/10.jpg", :answer => "ca cao", :hint => "Hint: Một biến thể của “hát không lùn”"},
-{:level => 11, :imagelink => "data/11.png", :answer => "heo hút", :hint => "Hint: Một biến thể của “hát không lùn”"},
-{:level => 12, :imagelink => "data/12.jpg", :answer => "quả cảm", :hint => "Hint: Một biến thể của “hát không lùn”"},
-{:level => 13, :imagelink => "data/13.jpg", :answer => "câu giờ", :hint => "Hint: Một biến thể của “hát không lùn”"},
-{:level => 14, :imagelink => "data/14.jpg", :answer => "lạc hậu", :hint => "Hint: Một biến thể của “hát không lùn”"},  	 
+			{:level => 11, :imagelink => "data/11.png", :answer => "heo hút", :hint => "Hint: Một biến thể của “hát không lùn”"},
+			{:level => 12, :imagelink => "data/12.jpg", :answer => "quả cảm", :hint => "Hint: Một biến thể của “hát không lùn”"},
+			{:level => 13, :imagelink => "data/13.jpg", :answer => "câu giờ", :hint => "Hint: Một biến thể của “hát không lùn”"},
+			{:level => 14, :imagelink => "data/14.jpg", :answer => "lạc hậu", :hint => "Hint: Một biến thể của “hát không lùn”"},  	 
 ]
 #cho nay la de tao datafix
 game1lvs.each do |game1lv|
