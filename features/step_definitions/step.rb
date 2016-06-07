@@ -45,3 +45,7 @@ end
 Then(/^I should see "([^"]*)" in a link$/) do |arg1|
   assert page.has_link? arg1
 end
+
+
+# expect(page).to have_xpath("//img[contains(@src,'catch.jpg')]")
+ 
